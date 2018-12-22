@@ -29,6 +29,7 @@ const ContentBox = styled.div`
   position: absolute;
   top: 27.9%;
   left: 13.2%;
+  width: 30%;
 `;
 
 export interface SubjectProps {
@@ -42,7 +43,7 @@ class Subject extends React.Component<SubjectProps, any> {
         <OutsideClickHandler onOutsideClick={this.props.close}>
           <E>
             <ContentBox>
-              <div>Hello world</div>
+              <div>13~24세에게 필요한 앱 및 서비스</div>
             </ContentBox>
           </E>
         </OutsideClickHandler>
