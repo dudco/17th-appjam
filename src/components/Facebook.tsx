@@ -24,7 +24,11 @@ const Wrapper = styled.div`
   position: absolute;
   z-index: 1;
 `;
-
+const ContentBox = styled.div`
+  position: absolute;
+  top: 27.9%;
+  left: 13.2%;
+`;
 export interface FaceBookProps {
   close();
 }
@@ -34,7 +38,11 @@ class FaceBook extends React.Component<FaceBookProps, any> {
     return (
       <Wrapper>
         <OutsideClickHandler onOutsideClick={this.props.close}>
-          <E>hello world</E>
+          <E>
+            <ContentBox>
+              <div>Hello world</div>
+            </ContentBox>
+          </E>
         </OutsideClickHandler>
       </Wrapper>
     );

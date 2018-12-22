@@ -25,6 +25,11 @@ const Wrapper = styled.div`
   z-index: 1;
 `;
 
+const ContentBox = styled.div`
+  position: absolute;
+  top: 27.9%;
+  left: 13.2%;
+`;
 export interface ServiceProps {
   close();
 }
@@ -34,7 +39,11 @@ class Service extends React.Component<ServiceProps, any> {
     return (
       <Wrapper>
         <OutsideClickHandler onOutsideClick={this.props.close}>
-          <E>hello world</E>
+          <E>
+            <ContentBox>
+              <div>Hello world</div>
+            </ContentBox>
+          </E>
         </OutsideClickHandler>
       </Wrapper>
     );

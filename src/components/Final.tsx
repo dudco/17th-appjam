@@ -25,6 +25,11 @@ const Wrapper = styled.div`
   z-index: 1;
 `;
 
+const ContentBox = styled.div`
+  position: absolute;
+  top: 27.9%;
+  left: 13.2%;
+`;
 export interface FinalProps {
   close();
 }
@@ -34,7 +39,48 @@ class Final extends React.Component<FinalProps, any> {
     return (
       <Wrapper>
         <OutsideClickHandler onOutsideClick={this.props.close}>
-          <E>hello world</E>
+          <E>
+            <ContentBox>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <a
+                  href="https://goo.gl/forms/LbBHFJKYx9BPGzZk2"
+                  style={{
+                    textDecoration: "none",
+                    color: "#000",
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                    marginBottom: "15px"
+                  }}
+                >
+                  팀빌딩 제출
+                </a>
+                <a
+                  href="https://goo.gl/forms/XCqSo35f6ZUMOI0w2"
+                  style={{
+                    textDecoration: "none",
+                    color: "#000",
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                    marginBottom: "15px"
+                  }}
+                >
+                  중간 제출
+                </a>
+                <a
+                  href="https://goo.gl/forms/Tl7WKuQBkJfdC6oT2"
+                  style={{
+                    textDecoration: "none",
+                    color: "#000",
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                    marginBottom: "15px"
+                  }}
+                >
+                  최종 제출
+                </a>
+              </div>
+            </ContentBox>
+          </E>
         </OutsideClickHandler>
       </Wrapper>
     );
