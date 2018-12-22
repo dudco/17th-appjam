@@ -3,6 +3,7 @@ import * as ReactDOM from "react-dom";
 import { createGlobalStyle } from "styled-components";
 
 import App from "./App";
+import Miss from "./assets/Miss_Neally.otf";
 import Font from "./assets/timesbd.ttf";
 
 const GlobalStyle = createGlobalStyle`
@@ -16,6 +17,11 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
       font-family: "Times";
       src: url(${Font});
+  }
+
+  @font-face {
+    font-family: "Miss";
+    src: url(${Miss});
   }
 `;
 

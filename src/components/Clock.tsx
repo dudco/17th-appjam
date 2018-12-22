@@ -29,7 +29,7 @@ interface ClockState {
   time: number;
 }
 
-const dDay = new Date("2018-12-23 08:30:00");
+const dDay = new Date("2018-12-22 08:30:00");
 class Clock extends React.Component<ClockProps, ClockState> {
   private counter: NodeJS.Timer;
 
@@ -55,11 +55,17 @@ class Clock extends React.Component<ClockProps, ClockState> {
   public render() {
     return (
       <Root>
-        <span>{Math.floor(this.state.time / (1000 * 60 * 60))}</span>
-        <span>:</span>
-        <span>{Math.floor((this.state.time / (1000 * 60)) % 60)}</span>
-        <span>:</span>
-        <span>{Math.floor((this.state.time / 1000) % 60)}</span>
+        {this.state.time < 0 ? (
+          <span style={{ fontSize: "37px" }}>수고하셨습니다~~!!!</span>
+        ) : (
+          <>
+            <span>{Math.floor(this.state.time / (1000 * 60 * 60))}</span>
+            <span>:</span>
+            <span>{Math.floor((this.state.time / (1000 * 60)) % 60)}</span>
+            <span>:</span>
+            <span>{Math.floor((this.state.time / 1000) % 60)}</span>
+          </>
+        )}
       </Root>
     );
   }
