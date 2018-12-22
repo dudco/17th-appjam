@@ -40,7 +40,18 @@ class FaceBook extends React.Component<FaceBookProps, any> {
         <OutsideClickHandler onOutsideClick={this.props.close}>
           <E>
             <ContentBox>
-              <div>Hello world</div>
+              <a
+                href="https://www.facebook.com/smarteenappclub/"
+                style={{
+                  textDecoration: "none",
+                  color: "#000",
+                  fontSize: "20px",
+                  fontWeight: "bold",
+                  marginBottom: "15px"
+                }}
+              >
+                Facebook
+              </a>
             </ContentBox>
           </E>
         </OutsideClickHandler>

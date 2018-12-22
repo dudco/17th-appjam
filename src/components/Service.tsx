@@ -41,7 +41,7 @@ class Service extends React.Component<ServiceProps, any> {
         <OutsideClickHandler onOutsideClick={this.props.close}>
           <E>
             <ContentBox>
-              <div>Hello world</div>
+              <div>윙가르디움 레비오~우사</div>
             </ContentBox>
           </E>
         </OutsideClickHandler>
